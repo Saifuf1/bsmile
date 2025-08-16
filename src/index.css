@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 208 100% 64%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4% 96%;
+    --secondary-foreground: 240 10% 3.9%;
+
+    --muted: 240 4% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 268 100% 70%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 96%;
+    --ring: 208 100% 64%;
+
+    /* Light Mode Brand Colors */
+    --cyber-blue: 208 100% 64%;
+    --cyber-purple: 268 100% 70%;
+    --cyber-pink: 328 100% 78%;
+    --cyber-teal: 174 100% 60%;
+    --neon-green: 120 100% 50%;
+    --dark-bg: 0 0% 100%;
+    --glass-bg: 0 0% 98%;
+    --glass-border: 240 30% 85%;
+    
+    /* Light Mode Enhanced Brand Colors */
+    --bsmile-teal: 174 100% 60%;
+    --bsmile-navy: 240 10% 15%;
+    --bsmile-light-teal: 174 50% 80%;
+    --bsmile-cream: 42 15% 95%;
+    
+    /* Light Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--cyber-blue)), hsl(var(--cyber-purple)));
+    --gradient-neon: linear-gradient(90deg, hsl(var(--cyber-teal)), hsl(var(--cyber-pink)));
+    --gradient-cyber: linear-gradient(45deg, hsl(var(--cyber-blue) / 0.1), hsl(var(--cyber-purple) / 0.1));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg) / 0.8), hsl(var(--glass-bg) / 0.4));
+    --gradient-calm: linear-gradient(180deg, hsl(var(--background)), hsl(var(--glass-bg)));
+    
+    /* Light Mode Shadows & Effects */
+    --shadow-soft: 0 10px 40px -10px hsl(var(--cyber-blue) / 0.2);
+    --shadow-glow: 0 0 50px hsl(var(--cyber-blue) / 0.2);
+    --shadow-neon: 0 0 30px hsl(var(--cyber-purple) / 0.3);
+    --shadow-glass: 0 8px 32px hsl(240 4% 16% / 0.1);
+    --blur-glass: blur(16px);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 208 100% 64%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 6% 10%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 268 100% 70%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 10%;
+    --ring: 208 100% 64%;
+
+    /* Dark Mode Brand Colors */
+    --cyber-blue: 208 100% 64%;
+    --cyber-purple: 268 100% 70%;
+    --cyber-pink: 328 100% 78%;
+    --cyber-teal: 174 100% 60%;
+    --neon-green: 120 100% 50%;
+    --dark-bg: 240 10% 3.9%;
+    --glass-bg: 240 10% 6%;
+    --glass-border: 240 30% 25%;
+    
+    /* Dark Mode Enhanced Brand Colors */
+    --bsmile-teal: 174 100% 60%;
+    --bsmile-navy: 240 10% 3.9%;
+    --bsmile-light-teal: 174 50% 80%;
+    --bsmile-cream: 42 15% 95%;
+    
+    /* Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--cyber-blue)), hsl(var(--cyber-purple)));
+    --gradient-neon: linear-gradient(90deg, hsl(var(--cyber-teal)), hsl(var(--cyber-pink)));
+    --gradient-cyber: linear-gradient(45deg, hsl(var(--cyber-blue) / 0.8), hsl(var(--cyber-purple) / 0.8));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg) / 0.8), hsl(var(--glass-bg) / 0.4));
+    --gradient-calm: linear-gradient(180deg, hsl(var(--dark-bg)), hsl(var(--glass-bg)));
+    
+    /* Dark Mode Shadows & Effects */
+    --shadow-soft: 0 10px 40px -10px hsl(var(--cyber-blue) / 0.3);
+    --shadow-glow: 0 0 50px hsl(var(--cyber-blue) / 0.4);
+    --shadow-neon: 0 0 30px hsl(var(--cyber-purple) / 0.6);
+    --shadow-glass: 0 8px 32px hsl(var(--dark-bg) / 0.8);
+    --blur-glass: blur(16px);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
